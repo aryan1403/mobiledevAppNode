@@ -2,7 +2,7 @@ const express = require('express') // Importing the express module
 const {getTodoById, getAllTodo} = require('./db')
 const app = express() // const... creating the app
 const Todo = require('./todo')
-const port = 3000
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
